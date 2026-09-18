@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fd">
+  <meta name="description" content="Найди своё направление, сравни университеты и построй персональный маршрут поступления с AdmitAvenue.">
+  <title>AdmitAvenue — твой маршрут поступления</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/motion.css"><link rel="stylesheet" href="/account.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip" data-i18n="skip">Перейти к содержимому</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="AdmitAvenue"><img src="/favicon.svg" width="34" height="34" alt=""><span>Admit<span class="brand-light">Avenue</span><span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label="Основная навигация" data-i18n-aria="nav">
+      <a href="#how" data-i18n="navHow">Как это работает</a><a href="#possibilities" data-i18n="navTools">Возможности</a><a href="#faq" data-i18n="navFaq">Вопросы</a>
+    </nav>
+    <div class="header-actions"><a class="account-header-link" href="/profile.html?view=dashboard" data-i18n="account">Мой маршрут</a><label class="language"><span class="globe" aria-hidden="true">◎</span><select id="language" aria-label="Язык / Language / Тіл"><option value="ru">RU</option><option value="kk">KZ</option><option value="en">EN</option></select></label><a class="button button-small button-dark header-cta" href="#start"><span data-i18n="begin">Начать</span><span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main id="main">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle" aria-hidden="true">✧</span><span data-i18n="eyebrow">Большое будущее начинается с тебя</span></div>
+        <h1><span data-i18n="heroOne">Твой потенциал.</span><br><span class="gradient-text" data-i18n="heroTwo">Твой маршрут.</span></h1>
+        <p class="hero-description" data-i18n="heroDescription">От «кем я хочу стать?» до понятного плана поступления. Найди своё направление и университет, в котором начнётся твоя история.</p>
+        <div class="hero-buttons"><a class="button button-purple" href="#start"><span data-i18n="buildRoute">Построить мой маршрут</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#how"><span class="play" aria-hidden="true">▷</span><span data-i18n="seeHow">Как это работает</span></a></div>
+        <div class="hero-note"><span class="small-check" aria-hidden="true">✓</span><span data-i18n="noAccount">Начни без регистрации. В своём темпе.</span></div>
+        <div class="hero-tags"><span data-i18n="tagKz">Казахстан</span><span aria-hidden="true">+</span><span data-i18n="tagWorld">Весь мир впереди</span><span class="tag-line"></span><span>ҚАЗ · РУС · ENG</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Пример персонального маршрута" data-i18n-aria="routeExample">
+        <div class="visual-halo"></div>
+        <div class="floating-label float-top"><span class="mini-star" aria-hidden="true">✦</span><span data-i18n="yourRules">Твои цели. Твои правила.</span></div>
+        <div class="route-card">
+          <div class="route-top"><div class="route-icon" aria-hidden="true">↗</div><div><span class="small-label" data-i18n="personalRoute">ПЕРСОНАЛЬНЫЙ МАРШРУТ</span><h2 data-i18n="fromDream">От мечты — к первому шагу</h2></div><span class="card-dots" aria-hidden="true">···</span></div>
+          <div class="route-progress"><span data-i18n="journeyBegins">Всё начинается с твоих интересов</span><span class="progress-spark" aria-hidden="true">✧</span></div>
+          <div class="journey">
+            <div class="journey-step"><div class="step-marker marker-done" aria-hidden="true">✓</div><div><span class="step-kicker" data-i18n="stepOne">ШАГ 01 · УЗНАТЬ СЕБЯ</span><h3 data-i18n="yourDirection">Твоё направление</h3><p data-i18n="directionNote">Интересы, сильные стороны и цели</p><div class="example-tags"><span>Design</span><span>Technology</span><span>Business</span></div></div></div>
+            <div class="journey-step active-step"><div class="step-marker marker-active" aria-hidden="true">02</div><div><span class="step-kicker" data-i18n="stepTwo">ШАГ 02 · НАЙТИ ВОЗМОЖНОСТИ</span><h3 data-i18n="yourUniversity">Университет под твои цели</h3><p data-i18n="universityNote">Сравни программы, бюджет и требования</p><div class="match-chip"><span aria-hidden="true">◎</span><span data-i18n="whyFits">С объяснением, почему подходит</span></div></div></div>
+            <div class="journey-step last-step"><div class="step-marker" aria-hidden="true">03</div><div><span class="step-kicker" data-i18n="stepThree">ШАГ 03 · ДЕЙСТВОВАТЬ</span><h3 data-i18n="yourPlan">План, с которым понятно</h3><p data-i18n="planNote">Экзамены, документы и активности</p></div></div>
+          </div>
+          <div class="route-footer"><span class="footer-dot" aria-hidden="true"></span><span data-i18n="nextStep">Один понятный следующий шаг</span><span aria-hidden="true">→</span></div>
+        </div>
+        <div class="floating-label float-bottom"><span class="check-tile" aria-hidden="true">✓</span><div><strong data-i18n="canDo">У тебя получится начать</strong><span data-i18n="stepAtTime">Не всё сразу. Шаг за шагом.</span></div></div>
+        <span class="visual-caption" data-i18n="illustrative">Так может выглядеть твой путь</span>
+      </div>
+    </section>
+    <div class="benefit-strip section-wrap"><span><i aria-hidden="true">◎</i><span data-i18n="stripPersonal">Под твои интересы</span></span><span><i aria-hidden="true">◇</i><span data-i18n="stripBudget">С учётом бюджета</span></span><span><i aria-hidden="true">↗</i><span data-i18n="stripClear">С понятным планом</span></span><span><i aria-hidden="true">✧</i><span data-i18n="stripPace">В твоём темпе</span></span></div>
+    <section class="start-section section-wrap reveal" id="start">
+      <div class="section-heading"><div><span class="eyebrow plain" data-i18n="startEyebrow">ТВОЯ ТОЧКА СТАРТА</span><h2 data-i18n="startTitle">Не обязательно знать все ответы.</h2></div><p data-i18n="startDescription">Начнём с того, что ты уже знаешь о себе.<br>Остальное разберём по пути.</p></div>
+      <div class="start-grid">
+        <button class="start-card known" data-path="known"><span class="start-icon" aria-hidden="true">↗</span><span class="start-card-body"><span class="small-label" data-i18n="haveGoal">ЕСТЬ ЦЕЛЬ</span><strong data-i18n="knowDirection">Я знаю, куда хочу</strong><span data-i18n="knowDescription">Подберём программы и составим план под выбранное направление.</span></span><span class="circle-arrow" aria-hidden="true">↗</span></button>
+        <button class="start-card explore" data-path="explore"><span class="start-icon" aria-hidden="true">✧</span><span class="start-card-body"><span class="small-label" data-i18n="looking">ЕЩЁ В ПОИСКЕ</span><strong data-i18n="findDirection">Хочу найти своё</strong><span data-i18n="findDescription">Исследуем твои интересы и найдём направления, которые откликаются.</span></span><span class="circle-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+    <section class="possibilities section-wrap reveal" id="possibilities">
+      <div class="section-heading"><div><span class="eyebrow plain" data-i18n="toolsEyebrow">МЕНЬШЕ ХАОСА. БОЛЬШЕ ЯСНОСТИ.</span><h2 data-i18n="toolsTitle">Всё складывается в твой маршрут.</h2></div><p data-i18n="toolsDescription">Твои интересы, возможности и действия —<br>в одной связной истории.</p></div>
+      <div class="bento-grid">
+        <article class="bento bento-direction"><span class="feature-number">01 /</span><div><h3 data-i18n="featureDirection">Сначала — понять себя</h3><p data-i18n="featureDirectionText">Профориентация помогает связать то, что тебе нравится, с направлениями учёбы.</p></div><div class="interest-cloud" aria-hidden="true"><span data-i18n="interestCreate">Создавать</span><span data-i18n="interestExplore">Исследовать</span><span class="interest-selected" data-i18n="interestSolve">Решать задачи ✧</span><span data-i18n="interestHelp">Помогать</span></div></article>
+        <article class="bento bento-universities"><span class="feature-number">02 /</span><div><h3 data-i18n="featureUniversities">Выбирать осознанно</h3><p data-i18n="featureUniversitiesText">Сравнение программ по стоимости, языку и требованиям. Причины выбора — рядом с рекомендацией.</p></div><div class="comparison-mini" aria-hidden="true"><div><span data-i18n="programA">Программа A</span><span data-i18n="programB">Программа B</span></div><div><span><i class="mini-bar bar-a"></i></span><span><i class="mini-bar bar-b"></i></span></div><div><span><i class="mini-bar bar-c"></i></span><span><i class="mini-bar bar-d"></i></span></div><p data-i18n="comparisonCaption">Твои критерии, а не чужой рейтинг</p></div></article>
+        <article class="bento bento-activities"><span class="feature-number">03 /</span><div><h3 data-i18n="featureActivities">Усилить свой профиль</h3><p data-i18n="featureActivitiesText">Добавляй олимпиады, соревнования, проекты и волонтёрство. План поможет оформить твой вклад или начать новую активность.</p></div><div class="activity-sample"><span class="activity-symbol" aria-hidden="true">✳</span><div><strong data-i18n="activityTitle">От интереса — к достижению</strong><span data-i18n="activitySubtitle">Городской · национальный · международный</span></div></div></article>
+        <article class="bento bento-ai"><span class="feature-number">04 /</span><div><h3 data-i18n="featureAi">Обсудить то, что волнует</h3><p data-i18n="featureAiText">AI-помощник для вопросов о выборе, подготовке и твоём плане.</p></div><div class="chat-sample"><span data-i18n="sampleQuestion">А если я ещё не сдавал IELTS?</span><span class="chat-reply" data-i18n="sampleReply">Это точка старта, а не тупик.<br>Учтём подготовку в твоём маршруте.</span></div><span class="planned-label" data-i18n="aiPlanned">AI-чат — на следующем этапе</span></article>
+      </div>
+    </section>
+    <section class="how-section reveal" id="how"><div class="section-wrap"><div class="section-heading"><div><span class="eyebrow plain" data-i18n="howEyebrow">ОТ ПЕРВОГО ВОПРОСА — К ДЕЙСТВИЮ</span><h2 data-i18n="howTitle">Большая цель. Понятные шаги.</h2></div><a href="#start" class="text-link"><span data-i18n="startWithMe">Начать с себя</span><span aria-hidden="true">↗</span></a></div><div class="how-grid"><article><span class="how-number">01</span><h3 data-i18n="howOne">Расскажи о себе</h3><p data-i18n="howOneText">Интересы, оценки, экзамены, достижения и бюджет. «Пока не сдавал» — тоже ответ.</p></article><article><span class="how-number">02</span><h3 data-i18n="howTwo">Посмотри на возможности</h3><p data-i18n="howTwoText">Изучи рекомендации и сравни варианты. Узнай, что подходит и над чем стоит поработать.</p></article><article><span class="how-number">03</span><h3 data-i18n="howThree">Сделай первый шаг</h3><p data-i18n="howThreeText">Получи план с конкретными задачами. Отмечай выполненное и двигайся к своей цели.</p></article></div></div></section>
+    <section class="faq-section section-wrap reveal" id="faq"><div class="faq-intro"><span class="eyebrow plain" data-i18n="faqEyebrow">ДАВАЙ РАЗБЕРЁМСЯ</span><h2 data-i18n="faqTitle">Есть вопросы?<br>Это нормально.</h2><p data-i18n="faqDescription">Поступление кажется сложным.<br>Начинать с вопросов — правильно.</p><span class="faq-decoration" aria-hidden="true">?</span></div><div class="faq-list"><details><summary data-i18n="faqQ1">Что делать, если я не выбрал профессию?</summary><p data-i18n="faqA1">Начни с пути «Хочу найти своё». Профориентация поможет исследовать интересы и возможные направления. Результат — повод разобраться, а не окончательный приговор о твоём будущем.</p></details><details><summary data-i18n="faqQ2">А если я ещё не сдавал экзамены?</summary><p data-i18n="faqA2">У каждого экзамена будет вариант «Не сдавал». Отсутствие результата не должно превращаться в нулевой балл: план должен учитывать подготовку и необходимость проверить требования программы.</p></details><details><summary data-i18n="faqQ3">Можно рассматривать Казахстан и зарубежье?</summary><p data-i18n="faqA3">Да. География подбора будет зависеть от доступных в сервисе программ. Для каждой программы важно проверять требования, стоимость и сроки на официальном сайте университета.</p></details><details><summary data-i18n="faqQ4">Сервис гарантирует поступление?</summary><p data-i18n="faqA4">Нет. Решение принимает университет. AdmitAvenue помогает организовать выбор и подготовку; рекомендации не заменяют официальные требования и не гарантируют зачисление или стипендию.</p></details><details><summary data-i18n="faqQ5">Что уже работает в этой версии?</summary><p data-i18n="faqA5">Работают главная, анкета и исследование интересов на трёх языках. Гостевой профиль сохраняется в браузере; после входа его можно сохранить в аккаунте. Доступны подбор программ, избранное, сравнение и личный план задач. В каталоге есть ссылки на университеты. ИИ для обратной связи подключим следующим этапом.</p></details></div></section>
+    <section class="final-cta section-wrap reveal"><span class="cta-spark" aria-hidden="true">✧</span><div><span class="eyebrow plain" data-i18n="finalEyebrow">ЭТО ТОЛЬКО НАЧАЛО</span><h2 data-i18n="finalTitle">Будущее не обязано быть туманным.</h2><p data-i18n="finalDescription">Давай начнём с одного понятного шага.</p></div><a href="#start" class="button button-dark"><span data-i18n="chooseStart">Выбрать точку старта</span><span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="footer section-wrap"><a class="brand" href="#"><img src="/favicon.svg" width="30" height="30" alt=""><span>Admit<span class="brand-light">Avenue</span><span class="brand-dot">.</span></span></a><span data-i18n="footerTag">Твой путь начинается с тебя.</span><span class="footer-meta">© 2026 AdmitAvenue</span></footer>
+  <noscript><p class="noscript-note">Для переключения языков включите JavaScript. Enable JavaScript to switch languages. Тілді ауыстыру үшін JavaScript қосыңыз.</p></noscript>
+</body>
+</html>

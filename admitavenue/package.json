@@ -1,0 +1,27 @@
+{
+  "name": "admitavenue",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "AdmitAvenue — personalized admission journey. LOCUSCASE2.",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check public/app.js && node --check public/profile.js && node --check public/profile-core.js && node --check server.mjs && node --check public/account.js && node --check public/cloud-store.js && node --check config.mjs && node --check public/programs.js && node --check public/journey-core.js && node --check public/journey-ui.js",
+    "test": "node --test tests/*.test.js",
+    "build": "node scripts/build.mjs",
+    "prestart": "node scripts/build.mjs",
+    "pretest": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "happy-dom": "^20.14.5"
+  },
+  "packageManager": "pnpm@11.19.0"
+}

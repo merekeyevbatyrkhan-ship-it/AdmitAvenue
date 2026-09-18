@@ -1,0 +1,16 @@
+/* Slow, compositor-friendly ambient movement. No external media or libraries. */
+body{isolation:isolate}
+body::before,body::after{content:"";position:fixed;pointer-events:none;z-index:-1;width:72vw;height:78vh;border-radius:50%;filter:blur(55px);opacity:.35;will-change:transform;contain:strict}
+body::before{left:-20vw;top:10vh;background:radial-gradient(ellipse,#e9e3ff 0%,#ebecff88 43%,transparent 72%);animation:ambientDriftA 24s ease-in-out infinite alternate}
+body::after{right:-26vw;top:30vh;background:radial-gradient(ellipse,#dfefff 0%,#e9e9fc88 42%,transparent 72%);animation:ambientDriftB 29s ease-in-out infinite alternate}
+.hero-visual .visual-halo{animation:haloBreathe 12s ease-in-out infinite alternate;transform-origin:center}
+.hero .route-card{animation:routeFloat 10s ease-in-out infinite}
+.start-card,.bento,.button,.choice-chip{transition-timing-function:cubic-bezier(.22,1,.36,1)}
+.bento{transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .55s cubic-bezier(.22,1,.36,1)}
+@media(hover:hover){.bento:hover{transform:translateY(-5px);box-shadow:0 16px 45px #60488910}.button:hover{transform:translateY(-3px) scale(1.015)}}
+@keyframes ambientDriftA{0%{transform:translate(-3vw,-5vh) scale(.9)}50%{transform:translate(15vw,15vh) scale(1.12)}100%{transform:translate(32vw,-3vh) scale(.98)}}
+@keyframes ambientDriftB{0%{transform:translate(5vw,9vh) scale(1)}50%{transform:translate(-18vw,-15vh) scale(1.15)}100%{transform:translate(-32vw,20vh) scale(.92)}}
+@keyframes haloBreathe{from{opacity:.55;transform:scale(.93)}to{opacity:1;transform:scale(1.035)}}
+@keyframes routeFloat{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(1deg) translateY(-7px)}}
+@media(max-width:520px){body::before,body::after{filter:blur(35px);opacity:.27;width:90vw}.hero .route-card{animation:none}.hero-visual .visual-halo{animation:none}}
+@media(prefers-reduced-motion:reduce){body::before,body::after,.hero .route-card,.hero-visual .visual-halo{animation:none;will-change:auto}.bento,.button{transition:none}}
