@@ -1,3 +1,4 @@
+import {initChat} from './chat.js';
 import {journeyUI,VIEWS,icon} from './journey-ui.js';
 import {programById} from './programs.js';
 import {makePlan} from './journey-core.js';
@@ -9,7 +10,7 @@ const KEY='admitavenue.profile.v1';
 const root=document.querySelector('#profile-app');
 const params=new URLSearchParams(location.search);
 const draftStorage=params.has('test')?sessionStorage:localStorage;
-let account;
+let account,chat;
 let view=VIEWS.includes(params.get('view'))?params.get('view'):'profile';
 let workspaceUI,notice='';
 let aiState={status:'idle',data:null};
@@ -98,8 +99,8 @@ render();
 
 account=initAccount({
   getDraft:()=>({profile,step,locale}),getLocale:()=>locale,testMode:params.has('test'),
-  onChange:()=>{updateSaveStatus();const label=document.querySelector('.draft-tools>span');if(label)label.textContent=account?.cloudActive?t('Изменения сохраняются кнопкой «Сохранить в аккаунт»','Өзгерістер «Аккаунтта сақтау» түймесімен сақталады','Use Save to account to save changes'):t('Гостевой черновик сохраняется автоматически','Қонақ нұсқасы автоматты түрде сақталады','Your guest draft saves automatically');},
-  setDraft:saved=>{profile=normalizeProfile(saved.profile);step=Number.isInteger(saved.step)?Math.max(0,Math.min(6,saved.step)):0;if(['ru','kk','en'].includes(saved.locale))locale=saved.locale;errors=[];restored=false;render();}
+  onChange:()=>{chat?.sync();updateSaveStatus();const label=document.querySelector('.draft-tools>span');if(label)label.textContent=account?.cloudActive?t('Изменения сохраняются кнопкой «Сохранить в аккаунт»','Өзгерістер «Аккаунтта сақтау» түймесімен сақталады','Use Save to account to save changes'):t('Гостевой черновик сохраняется автоматически','Қонақ нұсқасы автоматты түрде сақталады','Your guest draft saves automatically');},
+  setDraft:saved=>{chat?.reset();profile=normalizeProfile(saved.profile);step=Number.isInteger(saved.step)?Math.max(0,Math.min(6,saved.step)):0;if(['ru','kk','en'].includes(saved.locale))locale=saved.locale;errors=[];restored=false;render();}
 });
 
 function setView(next){
@@ -139,3 +140,4 @@ root.addEventListener('change',event=>{
   else {if(el.value&&!el.validity.valid)return;if(el.value)profile.journey.dates[taskId]=el.value;else delete profile.journey.dates[taskId];}
   save();render();const task=document.querySelector(el.dataset.task?'[data-task="'+taskId+'"]':'[data-task-date="'+taskId+'"]');task?.focus({preventScroll:true});
 });
+chat=initChat({getProfile:()=>profile,getIdentity:()=>account?.identity||'guest'});

@@ -1,12 +1,12 @@
 {
   "name": "admitavenue",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "description": "AdmitAvenue — personalized admission journey. LOCUSCASE2.",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check public/app.js && node --check public/profile.js && node --check public/profile-core.js && node --check server.mjs && node --check public/account.js && node --check public/cloud-store.js && node --check config.mjs && node --check public/programs.js && node --check public/journey-core.js && node --check public/journey-ui.js",
+    "check": "node --check public/app.js && node --check public/profile.js && node --check public/profile-core.js && node --check server.mjs && node --check public/account.js && node --check public/cloud-store.js && node --check config.mjs && node --check public/programs.js && node --check public/journey-core.js && node --check public/journey-ui.js && node --check public/chat.js && node --check public/chat-home.js && node --check public/analysis-profile.js && node --check lib/chat.mjs && node --check lib/ai-insights.mjs && node --check lib/catalog.mjs && node --check lib/request-limits.mjs",
     "test": "node --test tests/*.test.js",
     "build": "node scripts/build.mjs",
     "prestart": "node scripts/build.mjs",
